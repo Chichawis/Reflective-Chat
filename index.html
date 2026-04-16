@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nuestro Rinconcito | Para escribir antes de hablar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="orb orb-a"></div>
+  <div class="orb orb-b"></div>
+  <div class="orb orb-c"></div>
+
+  <header class="hero shell reveal">
+    <div class="hero-top">
+      <div>
+        <p class="overline">Un espacio entre nosotros</p>
+        <h1>Nuestro Rinconcito</h1>
+      </div>
+      <button class="ghost-button" id="themeToggle" type="button" aria-pressed="false">Modo suave</button>
+    </div>
+
+    <div class="hero-grid">
+      <section class="hero-main card soft-card">
+        <span class="pill">Para cuando algo te pegó, pero aún no es momento de hablarlo</span>
+        <h2>Escribe primero. Entiende lo que sientes. Háblenlo después con más calma.</h2>
+        <p>
+          Esta página no es para guardar molestias ni para lanzar reclamos. Es para bajar lo que sientes,
+          ordenar ideas y llegar a la conversación con un poquito más de claridad, cariño y honestidad.
+        </p>
+
+        <div class="hero-actions">
+          <button class="primary-button" data-target="flujo" type="button">Empezar</button>
+          <button class="secondary-button" data-target="resumen" type="button">Ver mi resumen</button>
+        </div>
+
+        <div class="mini-points">
+          <div>Desahogarte sin explotar</div>
+          <div>Entender qué te movió</div>
+          <div>Prepararte para hablar bonito</div>
+        </div>
+      </section>
+
+      <aside class="hero-side card accent-card">
+        <p class="card-kicker">La idea detrás</p>
+        <h3>No dejar que lo pequeño se haga grande.</h3>
+        <p>
+          A veces sí queremos decir algo, pero no es el momento, no sabemos cómo o traemos demasiada emoción encima.
+          Este lugar ayuda a no tragarte lo que sientes, pero tampoco decirlo de la peor forma.
+        </p>
+        <div class="quote-box">
+          “Lo escribo ahorita para no olvidarlo, exagerarlo ni guardarlo de más.”
+        </div>
+      </aside>
+    </div>
+  </header>
+
+  <main class="shell">
+    <section class="idea-section reveal">
+      <div class="section-head">
+        <p class="overline">Propósito</p>
+        <h3>Una idea más simple, útil y cercana</h3>
+      </div>
+
+      <div class="idea-grid">
+        <article class="card info-card">
+          <span class="emoji-mark">1</span>
+          <h4>Soltar</h4>
+          <p>Primero escribes qué pasó y qué te dolió, sin preocuparte por sonar perfecto.</p>
+        </article>
+        <article class="card info-card">
+          <span class="emoji-mark">2</span>
+          <h4>Entender</h4>
+          <p>Luego aclaras qué emoción hubo, qué necesidad se movió y qué parte fue la que te pesó más.</p>
+        </article>
+        <article class="card info-card">
+          <span class="emoji-mark">3</span>
+          <h4>Hablar mejor</h4>
+          <p>Al final te llevas una pequeña guía para iniciar la conversación sin irte al ataque.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="flow card reveal" id="flujo">
+      <div class="section-head">
+        <p class="overline">Flujo de reflexión</p>
+        <h3>Tres pasos sencillos</h3>
+        <p>La idea es que usarlo se sienta ligero, no pesado. Menos estructura rígida, más claridad útil.</p>
+      </div>
+
+      <div class="step-tabs" role="tablist" aria-label="Pasos de reflexión">
+        <button class="step-tab active" type="button" role="tab" aria-selected="true" aria-controls="paso-uno" id="tab-uno">1. Qué pasó</button>
+        <button class="step-tab" type="button" role="tab" aria-selected="false" aria-controls="paso-dos" id="tab-dos">2. Qué siento</button>
+        <button class="step-tab" type="button" role="tab" aria-selected="false" aria-controls="paso-tres" id="tab-tres">3. Cómo hablarlo</button>
+      </div>
+
+      <div class="step-panel active" id="paso-uno" role="tabpanel" aria-labelledby="tab-uno">
+        <div class="split-layout">
+          <div class="card inner-card">
+            <p class="card-kicker">Paso 1</p>
+            <h4>Baja la situación como la viviste</h4>
+            <p>No hace falta que lo redactes bonito. Solo cuéntalo como te salió.</p>
+          </div>
+
+          <div class="field-stack">
+            <label class="field">
+              <span>¿Qué pasó?</span>
+              <textarea id="situacion" rows="5" placeholder="Cuenta la situación desde tu lado, como si te la estuvieras explicando a ti mismo."></textarea>
+            </label>
+
+            <label class="field">
+              <span>¿Qué fue lo que más te pegó?</span>
+              <textarea id="molestia" rows="4" placeholder="Puede haber sido una acción, un tono, una omisión o una frase."></textarea>
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <div class="step-panel" id="paso-dos" role="tabpanel" aria-labelledby="tab-dos">
+        <div class="feel-grid">
+          <div class="card inner-card">
+            <p class="card-kicker">Check-in rápido</p>
+            <h4>¿Qué emoción se parece más a lo que traes?</h4>
+            <div class="feeling-row">
+              <button class="feeling-button selected" type="button" data-emotion="Triste">Triste</button>
+              <button class="feeling-button" type="button" data-emotion="Molesto">Molesto</button>
+              <button class="feeling-button" type="button" data-emotion="Confundido">Confundido</button>
+              <button class="feeling-button" type="button" data-emotion="Herido">Herido</button>
+              <button class="feeling-button" type="button" data-emotion="Frustrado">Frustrado</button>
+            </div>
+
+            <div class="meter-box">
+              <div class="meter-head">
+                <span>¿Qué tan fuerte se siente ahorita?</span>
+                <strong id="intensityValue">5</strong>
+              </div>
+              <input id="intensityRange" type="range" min="1" max="10" value="5">
+            </div>
+          </div>
+
+          <div class="field-stack">
+            <label class="field">
+              <span>¿Qué no pudiste decir en ese momento?</span>
+              <textarea id="silencio" rows="4" placeholder="Escribe eso que se te quedó atorado."></textarea>
+            </label>
+
+            <label class="field">
+              <span>¿Qué crees que necesitabas en ese momento?</span>
+              <textarea id="necesidad" rows="4" placeholder="Por ejemplo: atención, calma, claridad, cariño, escucha o consideración."></textarea>
+            </label>
+
+            <label class="field">
+              <span>Si bajas un poquito la defensa, ¿qué otra explicación podría haber?</span>
+              <textarea id="perspectiva" rows="4" placeholder="No para invalidarte, sino para abrir espacio a una conversación más justa."></textarea>
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <div class="step-panel" id="paso-tres" role="tabpanel" aria-labelledby="tab-tres">
+        <div class="split-layout">
+          <div class="field-stack">
+            <label class="field">
+              <span>¿Cómo te gustaría empezar la conversación?</span>
+              <textarea id="apertura" rows="4" placeholder="Ejemplo: Quiero contarte algo que me movió, porque prefiero hablarlo bien a guardármelo."></textarea>
+            </label>
+
+            <label class="field">
+              <span>¿Qué te gustaría que la otra persona entendiera de ti?</span>
+              <textarea id="comprension" rows="4" placeholder="Escribe la idea central que sí quieres que quede clara."></textarea>
+            </label>
+
+            <label class="field">
+              <span>¿Qué ayudaría a que esto se sintiera mejor o más cuidado?</span>
+              <textarea id="acuerdo" rows="4" placeholder="Puede ser un acuerdo, una pequeña reparación o una forma diferente de hacerlo después."></textarea>
+            </label>
+          </div>
+
+          <div class="card inner-card">
+            <p class="card-kicker">Mini guía</p>
+            <h4>Antes de hablar...</h4>
+            <ul class="friendly-list">
+              <li>Habla desde lo que sentiste, no desde una acusación.</li>
+              <li>Intenta pedir algo concreto, no algo imposible.</li>
+              <li>Deja espacio para que también te expliquen su lado.</li>
+              <li>El objetivo es entenderse mejor, no ganar.</li>
+            </ul>
+
+            <div class="tag-group">
+              <button class="tag-button active" type="button">Aún lo estoy pensando</button>
+              <button class="tag-button" type="button">Ya puedo hablarlo</button>
+              <button class="tag-button" type="button">Necesito calmarme más</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="resumen reveal" id="resumen">
+      <div class="section-head">
+        <p class="overline">Tu resumen</p>
+        <h3>Lo importante, más claro</h3>
+        <p>Esto te ayuda a recordar lo esencial cuando llegue el momento de hablar.</p>
+      </div>
+
+      <div class="summary-layout">
+        <div class="card summary-card">
+          <p class="card-kicker">Vista rápida</p>
+          <div class="summary-block">
+            <h4>Lo que pasó</h4>
+            <p id="summarySituation">Aquí aparecerá un resumen de la situación.</p>
+          </div>
+          <div class="summary-block">
+            <h4>Cómo me sentí</h4>
+            <p id="summaryEmotion">Aquí se verá reflejada tu emoción principal.</p>
+          </div>
+          <div class="summary-block">
+            <h4>Lo que necesito expresar</h4>
+            <p id="summaryNeed">Aquí se juntará lo más importante que quieras comunicar.</p>
+          </div>
+          <div class="summary-block highlight-block">
+            <h4>Frase para empezar</h4>
+            <p id="summaryOpening">Aquí aparecerá una frase base para empezar la conversación con más calma.</p>
+          </div>
+        </div>
+
+        <div class="card actions-card">
+          <p class="card-kicker">Acciones</p>
+          <h4>Déjalo listo para después</h4>
+          <p>Puedes guardar esta reflexión en tu navegador y volver a verla cuando sí sea momento de hablar.</p>
+
+          <div class="action-column">
+            <button class="primary-button" id="saveEntry" type="button">Guardar en este navegador</button>
+            <button class="secondary-button" id="generateSummary" type="button">Actualizar resumen</button>
+            <button class="ghost-button" id="clearForm" type="button">Borrar todo</button>
+          </div>
+
+          <div class="tiny-note">
+            Consejo: úsalo para aclararte, no para coleccionar molestias. La meta sigue siendo hablarlo con amor.
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="toast" id="toast" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
